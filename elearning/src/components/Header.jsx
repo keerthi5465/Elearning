@@ -34,8 +34,7 @@ const Navigation = styled.nav`
     font-weight: 600;
     transition: background-color 0.3s ease;
 
-    &:hover,
-    &.active {
+    &:hover {
       background: #07c2c2;
       color: #fff;
     }
@@ -48,7 +47,7 @@ const Header = () => {
       <HeaderContainer>
         <Logo>logo</Logo>
         <Navigation>
-          <a href="#" className="active">Home</a>
+          <a href="#">Home</a>
           <a href="#">Courses</a>
           <a href="#">Boost</a>
           <a href="#">Test</a>
