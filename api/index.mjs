@@ -1,6 +1,8 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import authRouter from './routes/auth.route.js';
+//import userRouter from './routes/user.route.mjs';
 
 dotenv.config();
 
@@ -18,4 +20,15 @@ app.listen(3000,()=>{
 
 }
 );
+
+
+
+app.get('/test',(req,res)=>{
+    res.json({
+        message:'Hello',
+    });
+});
+
+app.use('/api/auth',authRouter);
+
 
