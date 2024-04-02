@@ -1,6 +1,10 @@
 {
   "name": "elearning",
+<<<<<<< HEAD
   "version":"0.0.0",
+=======
+  "version": "0.0.0",
+>>>>>>> 727b9013a8baf684e2aef715f370f21aec5fb441
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -13,6 +17,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
+    "react-script": "^2.0.5",
     "styled-components": "^6.1.8"
   },
   "devDependencies": {
