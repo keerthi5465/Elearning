@@ -1,10 +1,6 @@
 {
   "name": "elearning",
-<<<<<<< HEAD
-  "version":"0.0.0",
-=======
   "version": "0.0.0",
->>>>>>> 727b9013a8baf684e2aef715f370f21aec5fb441
   "main": "index.js",
   "type": "module",
   "scripts": {
