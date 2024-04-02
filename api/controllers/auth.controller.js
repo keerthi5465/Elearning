@@ -1,6 +1,5 @@
-export const signup=(req,res)=>{
-
+const signup = (req, res) => {
     console.log(req.body);
-
-
 };
+
+module.exports = signup;
