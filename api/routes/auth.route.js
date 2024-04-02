@@ -3,6 +3,9 @@ const { signup } = require('../controllers/auth.controller.js'); // Import using
 
 const router = express.Router();
 
-router.post("/signup");
+router.post("/signup",signup);
 
 module.exports = router; // Export using module.exports
+
+
+

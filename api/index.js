@@ -1,4 +1,4 @@
-const express = require('express');
+/*const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 
@@ -34,6 +34,8 @@ app.use('/api/user', userRouter);
 app.use('/api/auth', authRouter);
 module.exports = app;
 
+app.use(express.json());
+
 /*import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
@@ -68,3 +70,53 @@ app.get('/test',(req,res)=>{
 app.use('/api/auth',authRouter);
 
 */
+
+const express = require('express');
+const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+const userRouter = require('./routes/user.route');
+const authRouter = require('./routes/auth.route');
+
+dotenv.config();
+const app = express();
+
+// Middleware
+app.use(express.json());
+
+// Routes
+app.get('/test', (req, res) => {
+    res.json({ "message": 'Hello' });
+});
+
+app.use('/api/user', userRouter);
+app.use('/api/auth', authRouter);
+
+// Connect to MongoDB
+/*mongoose.connect(process.env.MONGO)
+    .then(() => {
+        console.log('Connected to MongoDB');
+        // Start the server after successful MongoDB connection
+        app.listen(3000, () => {
+            console.log(`Server is running on port 3000!`);
+        });
+    })
+    .catch((err) => {
+        console.error('Error connecting to MongoDB:', err);
+    });
+    */
+    mongoose.connect("mongodb+srv://keerthikorrapati555:Elearning@elearning.cd81ayl.mongodb.net/?retryWrites=true&w=majority&appName=elearning", {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+      })
+      .then(() => {
+          console.log('Connected to MongoDB');
+          // Start the server after successful MongoDB connection
+          app.listen(3000, () => {
+              console.log(`Server is running on port 3000!`);
+          });
+      })
+      .catch((err) => {
+          console.error('Error connecting to MongoDB:', err);
+      });
+      
+
