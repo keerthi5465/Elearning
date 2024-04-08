@@ -5,7 +5,7 @@ import Boost from './pages/Boost'
 import Test from './pages/Test'
 import Review from './pages/Review'
 import Header from './components/Header'
-
+import SignIn from './pages/SignIn'
 
 export default function App() {
   return (
@@ -17,6 +17,7 @@ export default function App() {
       <Route path="/boost" element={<Boost/>}/>
       <Route path="/test" element={<Test/>}/>
       <Route path="/review" element={<Review/>}/>
+      <Route path="/signin" element={<SignIn/>}/>
 
     </Routes>
     </BrowserRouter>
